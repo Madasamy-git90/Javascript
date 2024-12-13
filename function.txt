@@ -1,0 +1,134 @@
+JavaScript Functions: Overview, Usage, and Examples
+A JavaScript function is a block of code that performs a specific task. Functions are reusable, which makes code more modular and easier to maintain.
+
+Syntax of a JavaScript Function:
+
+function functionName(parameter1, parameter2, ...) {
+    // code to be executed
+}
+
+
+function: This keyword is used to define a function.
+functionName: The name of the function.
+parameter1, parameter2, ...: Optional input values that the function can use.
+The code inside the curly braces {} is the body of the function, which defines what the function does.
+
+
+Function Types in JavaScript:
+Regular Functions
+Anonymous Functions
+Arrow Functions
+
+Regular Function
+A regular function is declared using the function keyword, and it can be called multiple times.
+
+Example:
+
+function greet(name) {
+    console.log("Hello, " + name + "!");
+}
+
+greet("Alice");  // Output: Hello, Alice!
+greet("Bob");    // Output: Hello, Bob!
+
+
+2. Anonymous Functions
+Anonymous functions don't have a name and are often used as arguments to other functions or as callback functions.
+
+let add = function(a, b) {
+    return a + b;
+};
+
+console.log(add(5, 3));  // Output: 8
+
+
+3. Arrow Functions
+Arrow functions provide a more concise syntax, especially for functions with a single expression.
+
+Example:
+
+let multiply = (a, b) => a * b;
+
+console.log(multiply(4, 3));  // Output: 12
+
+
+Arrow functions are often used for small functions or when passing functions as arguments.
+Usage of Functions:
+Reusability: Functions help avoid code repetition. Instead of writing the same code multiple times, you can simply call the function.
+
+function square(x) {
+    return x * x;
+}
+
+console.log(square(2));  // Output: 4
+console.log(square(3));  // Output: 9
+
+
+Callback Functions: Functions can be passed as arguments to other functions, allowing asynchronous or event-driven behavior.
+
+function fetchData(callback) {
+    let data = "Hello, World!";
+    callback(data);
+}
+
+fetchData(function(data) {
+    console.log(data);  // Output: Hello, World!
+});
+
+
+Returning Values: Functions can return a value to the caller using the return statement.
+
+Example:
+
+function add(x, y) {
+    return x + y;
+}
+
+let result = add(10, 20);
+console.log(result);  // Output: 30
+
+
+Default Parameters: JavaScript allows you to set default values for parameters if no value is provided during the function call.
+
+function greet(name = "Guest") {
+    console.log("Hello, " + name);
+}
+
+greet();          // Output: Hello, Guest
+greet("Alice");   // Output: Hello, Alice
+
+
+
+Rest Parameters: Rest parameters allow you to represent an indefinite number of arguments as an array.
+
+Example:
+
+function sum(...numbers) {
+    return numbers.reduce((acc, num) => acc + num, 0);
+}
+
+console.log(sum(1, 2, 3));  // Output: 6
+console.log(sum(5, 10, 15)); // Output: 30
+
+
+Returning Functions: Functions can return other functions, enabling closure.
+
+Example:
+
+function outer() {
+    let message = "Hello from outer function!";
+    
+    return function inner() {
+        console.log(message);
+    };
+}
+
+let myFunction = outer();
+myFunction();  // Output: Hello from outer function!
+
+
+
+
+
+
+

@@ -1,0 +1,204 @@
+Objects in JavaScript are used to store collections of data in the form of key-value pairs. They are one of the most important data structures in JavaScript 
+and allow you to group related data together. Objects can represent real-world entities or complex structures in your program.
+
+Creating JavaScript Objects
+There are several ways to create objects in JavaScript:
+
+1.Using Object Literals (most common): You can define an object directly using curly braces {}.
+
+Example:
+
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    greet: function() {
+        console.log("Hello, " + this.firstName + " " + this.lastName);
+    }
+};
+
+console.log(person.firstName); // Output: John
+person.greet();  // Output: Hello, John Doe
+
+Properties: firstName, lastName, and age are properties.
+Method: greet() is a method that uses this to access the object's properties.
+
+
+2.Using the new Object() syntax: You can also create an object using the new Object() constructor.
+
+let person = new Object();
+person.firstName = "Alice";
+person.lastName = "Smith";
+person.age = 25;
+person.greet = function() {
+    console.log("Hello, " + this.firstName + " " + this.lastName);
+};
+
+console.log(person.firstName); // Output: Alice
+person.greet();  // Output: Hello, Alice Smith
+
+
+Using Object.create() method: This allows you to create a new object, using an existing object as the prototype.
+
+let personPrototype = {
+    greet: function() {
+        console.log("Hello, " + this.firstName + " " + this.lastName);
+    }
+};
+
+let person = Object.create(personPrototype);
+person.firstName = "Bob";
+person.lastName = "Jones";
+person.age = 40;
+
+console.log(person.firstName);  // Output: Bob
+person.greet();  // Output: Hello, Bob Jones
+
+
+Accessing Object Properties
+You can access properties of an object in two ways:
+
+Dot Notation:
+
+let person = { firstName: "John", lastName: "Doe" };
+console.log(person.firstName);  // Output: John
+
+
+Bracket Notation (useful for dynamic property names):
+
+let person = { firstName: "Jane", lastName: "Smith" };
+console.log(person["lastName"]);  // Output: Smith
+
+
+You can also use bracket notation if the property name contains spaces or special characters.
+
+let person = { "first-name": "John", "last-name": "Doe" };
+console.log(person["first-name"]);  // Output: John
+
+
+Modifying Object Properties
+You can modify the value of an existing property using dot notation or bracket notation:
+
+Example:
+
+let person = { firstName: "John", lastName: "Doe", age: 30 };
+
+// Modifying using dot notation
+person.age = 31;
+console.log(person.age);  // Output: 31
+
+// Modifying using bracket notation
+person["firstName"] = "Alice";
+console.log(person.firstName);  // Output: Alice
+
+
+You can also add new properties dynamically:
+
+person.city = "New York";
+console.log(person.city);  // Output: New York
+
+
+Deleting Object Properties
+You can delete properties from an object using the delete operator:
+
+let person = { firstName: "John", lastName: "Doe", age: 30 };
+
+delete person.age;
+console.log(person.age);  // Output: undefined
+
+
+Iterating Over Object Properties
+You can iterate over an object's properties using a for...in loop.
+
+Example:
+
+let person = { firstName: "John", lastName: "Doe", age: 30 };
+
+for (let key in person) {
+    console.log(key + ": " + person[key]);
+}
+// Output:
+// firstName: John
+// lastName: Doe
+// age: 30
+
+
+
+Using Methods in Objects
+Objects can have methods, which are functions associated with that object. Methods allow you to define behaviors that are related to the object.
+
+let car = {
+    make: "Toyota",
+    model: "Corolla",
+    year: 2020,
+    displayInfo: function() {
+        return this.make + " " + this.model + " (" + this.year + ")";
+    }
+};
+
+console.log(car.displayInfo());  // Output: Toyota Corolla (2020)
+
+
+The method displayInfo() uses this to refer to the current object and access its properties.
+
+Nested Objects
+Objects can contain other objects, allowing you to represent more complex data structures.
+
+Example:
+
+let person = {
+    firstName: "John",
+    lastName: "Doe",
+    address: {
+        street: "123 Main St",
+        city: "New York",
+        zipCode: "10001"
+    }
+};
+
+console.log(person.address.city);  // Output: New York
+
+
+In this example, address is a nested object within the person object.
+
+Using Object Methods to Clone Objects
+You can use Object.assign() to create a shallow copy of an object.
+
+
+let person = { firstName: "John", lastName: "Doe" };
+
+let newPerson = Object.assign({}, person);
+newPerson.firstName = "Alice";
+
+console.log(person.firstName);  // Output: John
+console.log(newPerson.firstName);  // Output: Alice
+
+Shallow Copy: Object.assign() copies the properties of the original object to the new object. However, if the object contains nested objects, 
+they are still references, not copies.
+
+Using Object.keys(), Object.values(), and Object.entries()
+Object.keys(): Returns an array of the object's keys.
+
+let person = { firstName: "John", lastName: "Doe" };
+console.log(Object.keys(person));  // Output: ["firstName", "lastName"]
+
+
+Object.values(): Returns an array of the object's values.
+
+console.log(Object.values(person));  // Output: ["John", "Doe"]
+
+
+Object.entries(): Returns an array of [key, value] pairs.
+
+console.log(Object.entries(person));  // Output: [["firstName", "John"], ["lastName", "Doe"]]
+
+
+Summary of Key Points:
+Creating Objects: Use object literals {}, new Object(), or Object.create().
+Accessing and Modifying Properties: Use dot notation (object.property) or bracket notation (object["property"]).
+Methods: Objects can contain methods (functions as properties).
+Iteration: Use for...in to iterate over an object's properties.
+Nested Objects: Objects can contain other objects.
+Shallow Copy: Use Object.assign() to create a shallow copy of an object.
+Utility Methods: Use Object.keys(), Object.values(), and Object.entries() to work with object properties.
+
