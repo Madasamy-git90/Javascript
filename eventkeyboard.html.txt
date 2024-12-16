@@ -1,0 +1,9 @@
+<input type="text" id="inputField" placeholder="Type something here">
+<script>
+    let input = document.getElementById("inputField");
+
+    // Listen for keydown event
+    input.addEventListener("keydown", function(event) {
+        console.log("Key pressed: " + event.key); // Logs the key that was pressed
+    });
+</script>

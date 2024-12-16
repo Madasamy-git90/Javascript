@@ -1,0 +1,87 @@
+ 
+Java Script	 
+ 	Java Script basics
+ 	Functions
+ 	Objects
+ 	Events
+ 	Modules
+ 	Classes
+ 	JSON
+ 	Error handling
+ 	Best practice
+ 	 
+ 	 
+ 	 
+Advanced Java Script	 
+ 	JavaScript Closures
+ 	Inheritances
+ 	Event Loops
+ 	Callback Functions
+ 	Async/Await And Promises
+ 	Functional Programming
+ 	High-Order Functions
+ 	Generators
+ 	Hoisting
+ 	Expressions
+ 	Memoization
+ 	Currying
+ 	Error Handling
+ 	Best Practice
+ 	 
+Type Script	 
+ 	Type Script basics
+ 	Annotations
+ 	Components
+ 	Interfaces
+ 	Classes
+ 	Generics
+ 	Enums
+ 	Decorators
+ 	Modules
+ 	Best Practice
+ 
+ 
+ 
+Node JS	 
+ 	Introduction to  Node.js
+ 	Key javascript COncepts
+ 	Node Binary
+ 	NodeJS Architecture
+ 	Packages and Dependencies
+ 	Node.js Process Model
+ 	Node JS Installation in Windows
+ 	Node.js Fundamentals
+ 	Asynchronous Control Flow
+ 	NodeJS File System
+ 	NodeJs Event System
+ 	Error Handling
+ 	Buffers
+ 	Streams
+ 	Node.js Modules
+ 	Local Modules in Node.js
+ 	Export Modules in Node.js
+ 	Node Package Manager (NPM)
+ 	Create Web Server in Node.js
+ 	Debugging Node.js Application
+ 	Node Inspector for Debugging Node.js Application
+ 	Node.js EventEmitter
+ 	Event Loop
+ 	Modules
+ 	Open-source Frameworks for Node.js
+ 	Express.js
+ 	Express.js Web App
+ 	Serving Static Files from Node.js
+ 	Implementing public facing web servers
+ 	Creating RESTful HTTP services
+ 	Serving Web Content
+ 	Manipulating Data with RESTful Services
+ 	Consuming and Aggregating Services
+ 	Consuming other HTTP services
+ 	Proxying HTTP Requests
+ 	Knowledge of HTTP verbs and status codes
+ 	Processing user input
+ 	Protecting against malicious input
+ 	Attack mitigation
+ 	Query Builder
+ 
+ 
